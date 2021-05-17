@@ -8,5 +8,7 @@
 
     <Application.Styles>
         <FluentTheme Mode="Light"/>
+        <StyleInclude Source="/Styles/SideBar.xaml" />
+      <StyleInclude Source="/Styles/Button.xaml" />
     </Application.Styles>
 </Application>

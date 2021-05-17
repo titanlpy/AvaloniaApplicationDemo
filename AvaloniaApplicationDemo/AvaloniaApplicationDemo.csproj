@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
@@ -7,6 +7,10 @@
   <ItemGroup>
     <Folder Include="Models\" />
     <AvaloniaResource Include="Assets\**" />
+    <AvaloniaResource Include="Styles\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Styles\Button.xaml" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="0.10.3" />
@@ -18,5 +22,9 @@
     <Compile Update="Views\LeftMenuView.axaml.cs">
       <DependentUpon>LeftMenuView.axaml</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AvaloniaResource Include="Styles\SideBar.xaml" />
+    <AvaloniaResource Include="Styles\Button.xaml" />
   </ItemGroup>
 </Project>

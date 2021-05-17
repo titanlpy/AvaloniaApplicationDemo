@@ -2,8 +2,20 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="80" d:DesignHeight="900"
         x:Class="AvaloniaApplicationDemo.Views.LeftMenu"
         Title="LeftMenu">
-  Welcome to Avalonia!
+  <DockPanel>
+    <Menu DockPanel.Dock="Left">
+      <MenuItem Header="主页">
+      </MenuItem>
+      <MenuItem Header="主页">
+      </MenuItem>
+      <MenuItem Header="主页">
+      </MenuItem>
+      <MenuItem Header="主页">
+      </MenuItem>
+      
+    </Menu>
+  </DockPanel>
 </Window>

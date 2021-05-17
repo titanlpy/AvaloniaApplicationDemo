@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\LPY\\AvaloniaApplicationDemo\\AvaloniaApplicationDemo\\AvaloniaApplicationDemo.csproj": {}
+    "F:\\GitHubRepository\\AvaloniaApplicationDemo\\AvaloniaApplicationDemo\\AvaloniaApplicationDemo.csproj": {}
   },
   "projects": {
-    "D:\\LPY\\AvaloniaApplicationDemo\\AvaloniaApplicationDemo\\AvaloniaApplicationDemo.csproj": {
+    "F:\\GitHubRepository\\AvaloniaApplicationDemo\\AvaloniaApplicationDemo\\AvaloniaApplicationDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\LPY\\AvaloniaApplicationDemo\\AvaloniaApplicationDemo\\AvaloniaApplicationDemo.csproj",
+        "projectUniqueName": "F:\\GitHubRepository\\AvaloniaApplicationDemo\\AvaloniaApplicationDemo\\AvaloniaApplicationDemo.csproj",
         "projectName": "AvaloniaApplicationDemo",
-        "projectPath": "D:\\LPY\\AvaloniaApplicationDemo\\AvaloniaApplicationDemo\\AvaloniaApplicationDemo.csproj",
+        "projectPath": "F:\\GitHubRepository\\AvaloniaApplicationDemo\\AvaloniaApplicationDemo\\AvaloniaApplicationDemo.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\LPY\\AvaloniaApplicationDemo\\AvaloniaApplicationDemo\\obj\\",
+        "outputPath": "F:\\GitHubRepository\\AvaloniaApplicationDemo\\AvaloniaApplicationDemo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

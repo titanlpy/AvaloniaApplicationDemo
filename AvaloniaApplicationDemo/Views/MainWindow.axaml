@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AvaloniaApplicationDemo.Views"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="1280" d:DesignHeight="720"
         x:Class="AvaloniaApplicationDemo.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
         Title="AvaloniaApplicationDemo">
@@ -14,8 +14,56 @@
     </Design.DataContext>
   <Panel>
     <DockPanel>
-      <local:LeftMenuView  />
+    <TabControl Name="TabControl" Classes="sidebar" Grid.ColumnSpan="2" DockPanel.Dock="Left">
+        <TabItem>
+          <TabItem.Header>
+            <Grid RowDefinitions="*,*">
+              <Button Classes="leftbutton" Grid.Row="0"/>
+              <TextBlock Text="主页" Grid.Row="1" HorizontalAlignment="Center"/>
+            </Grid>
+          </TabItem.Header>
+        <Border HorizontalAlignment="Stretch">
+          <Image Source="/Assets/avalonia-logo.ico" />
+        </Border>
+      </TabItem>
+
+      <TabItem>
+        <TabItem.Header>
+          <Grid RowDefinitions="*,*">
+            <Button Classes="leftbutton" Grid.Row="0"/>
+            <TextBlock Text="工作台" Grid.Row="1" HorizontalAlignment="Center"/>
+          </Grid>
+        </TabItem.Header>
+        <Border HorizontalAlignment="Stretch">
+
+        </Border>
+      </TabItem>
+
+      <TabItem>
+        <TabItem.Header>
+          <Grid RowDefinitions="*,*">
+            <Button Classes="leftbutton" Grid.Row="0"/>
+            <TextBlock Text="控制器" Grid.Row="1" HorizontalAlignment="Center"/>
+          </Grid>
+        </TabItem.Header>
+        <Border HorizontalAlignment="Stretch">
+
+        </Border>
+      </TabItem>
+
+      <TabItem>
+        <TabItem.Header>
+          <Grid RowDefinitions="*,*">
+            <Button Classes="leftbutton" Grid.Row="0"/>
+            <TextBlock Text="配置" Grid.Row="1" HorizontalAlignment="Center"/>
+          </Grid>
+        </TabItem.Header>
+        <Border HorizontalAlignment="Stretch">
+
+        </Border>
+      </TabItem>
       
+    </TabControl>
     </DockPanel>
   </Panel>
 </Window>
