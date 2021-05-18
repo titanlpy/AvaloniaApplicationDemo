@@ -1,0 +1,70 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:assists="clr-namespace:Material.Styles.Assists"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:vm="using:AvaloniaApplicationDemo.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="500"
+             x:Class="AvaloniaApplicationDemo.Views.WorkTabControlView">
+  <Design.DataContext>
+    <vm:WorkTabControlViewModel/>
+  </Design.DataContext>
+  <UserControl.Styles>
+    <Style Selector="TabControl">
+      <!--<Setter Property="assists:TabControlAssist.TabHeaderHorizontalAlignment" Value="Left" />-->
+    </Style>
+    <Style Selector="TabControl > TabItem:selected">
+      <Setter Property="Background" Value="#3fffffff"/>
+      <Setter Property="FontSize" Value="14"/>
+    </Style>
+    <Style Selector="TabControl > TabItem:pointerover">
+      <Setter Property="Background" Value="#3fffffff"/>
+    </Style>
+  </UserControl.Styles>
+  <DockPanel>
+    <TabControl>
+      <TabControl.Items>
+        <TabItem Header="排队" HorizontalAlignment="Left">
+          <Border HorizontalAlignment="Stretch" Width="1000">
+            <DataGrid Name="datagrid" Items="{Binding Users}" Background="White" CanUserReorderColumns="True">
+              <DataGrid.Styles>
+                <Style Selector="TextBlock">
+                  <Setter Property="HorizontalAlignment" Value="Left" />
+                </Style>
+                <Style Selector="DataGridColumnHeader">
+                  <Setter Property="HorizontalAlignment" Value="Left" />
+                  <Setter Property="Background" Value="White" />
+                  <Setter Property="SeparatorBrush" Value="Transparent" />
+                </Style>
+                <Style Selector="DataGridRow">
+                  <Setter Property="Background" Value="White" />
+                </Style>
+              </DataGrid.Styles>
+              <DataGrid.Columns>
+                <DataGridTextColumn Header="登录名" Width="2*" Binding="{Binding UserName}"/>
+                <DataGridTextColumn Header="姓名" Width="*" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="部门" Width="*" Binding="{Binding Department}"/>
+                <DataGridTextColumn Header="手机" Width="*" Binding="{Binding PhoneNumber}"/>
+                <DataGridTextColumn Header="状态" Width="*" Binding="{Binding State}"/>
+                <DataGridTextColumn Header="创建时间" Width="2*" Binding="{Binding CreateTime}"/>
+                <DataGridTemplateColumn Header="操作">
+                  <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                      <StackPanel>
+                        <Button Content="编辑" Background="#f0ad4e"/>
+                      </StackPanel>
+                    </DataTemplate>
+                  </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+              </DataGrid.Columns>
+            </DataGrid>
+          </Border>
+        </TabItem>
+        <TabItem Header="业务" HorizontalAlignment="Left">
+          <TextBlock Classes="Centered" Text="Page 2" />
+        </TabItem>
+
+      </TabControl.Items>
+    </TabControl>
+  </DockPanel>
+</UserControl>

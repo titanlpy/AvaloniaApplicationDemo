@@ -1,0 +1,78 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="using:AvaloniaApplicationDemo.ViewModels"
+        xmlns:local="clr-namespace:AvaloniaApplicationDemo.Views"
+        xmlns:styles="clr-namespace:Material.Styles;assembly=Material.Styles"
+        mc:Ignorable="d" d:DesignWidth="1180" d:DesignHeight="720"
+        x:Class="AvaloniaApplicationDemo.Views.HomePage"
+             FontFamily="Microsoft YaHei">
+  <Design.DataContext>
+    <vm:HomePageViewModel/>
+  </Design.DataContext>
+  <UserControl.Styles>
+    <Style Selector="TabControl.sidebar > TabItem:selected">
+      <Setter Property="Background" Value="Yellow"/>
+    </Style>
+  </UserControl.Styles>
+  <Grid>
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto">
+      <styles:Card VerticalAlignment="Top" Height=" 60" Background="#f5f5f5" Grid.Row="0">
+        <StackPanel Margin="0,4">
+          <Grid ColumnDefinitions="Auto,Auto,Auto,Auto">
+            <TextBlock Classes="Headline7" Text="沈苏预防接种数字化门诊系统软件" Width="1000" FontSize="16" Grid.Column="0"/>
+            <Image Source="/Assets/avalonia-logo.ico" Width="40" Height="40" Margin="0 -10 0 0"  Grid.Column="1"/>
+            <Label Content="问诊1"  Grid.Column="2" VerticalContentAlignment="Stretch"/>
+            <Label Content="admin"  Grid.Column="3" VerticalContentAlignment="Stretch"/>
+          </Grid>
+        </StackPanel>
+      </styles:Card>
+
+      <styles:Card VerticalAlignment="Top" Height=" 120" Grid.Row="1" Margin="10 10 10 0">
+        <styles:Card.Background>
+          <ImageBrush Source="/Assets/back_szz.png" Stretch="Fill"/>
+        </styles:Card.Background>
+        <StackPanel Margin="0,4">
+            <Grid ColumnDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto">
+              <Grid Grid.Column="0" Width="120">
+                  <Image Source="/Assets/avalonia-logo.ico" Height="80" HorizontalAlignment="Center"/>
+              </Grid>
+              <Grid Grid.Column="1" RowDefinitions="30,Auto" VerticalAlignment="Center" Width="150">
+                <Label Content="门诊号码   A001" Foreground="White" FontSize="15" Grid.Row="0" />
+                <Label Content="身份证号" Foreground="White" FontSize="15" Grid.Row="1" />
+              </Grid>
+              <Grid Grid.Column="2" RowDefinitions="30,Auto" VerticalAlignment="Center" Width="150">
+                <Label Content="出生日期" Foreground="White" FontSize="15" Grid.Row="0" />
+                <Label Content="AEFI" Foreground="White" FontSize="15" Grid.Row="1" />
+              </Grid>
+              <Grid Grid.Column="3" RowDefinitions="30,Auto" VerticalAlignment="Center" Width="150">
+                <Label Content="年龄" Foreground="White" FontSize="15" Grid.Row="0" />
+                <Label Content=" " Foreground="White" FontSize="15" Grid.Row="1" />
+              </Grid>
+              <Grid Grid.Column="4" RowDefinitions="30,Auto" VerticalAlignment="Center" Width="150">
+                <Label Content="监护人" Foreground="White" FontSize="15" Grid.Row="0" />
+                <Label Content=" " Foreground="White" FontSize="15" Grid.Row="1" />
+              </Grid>
+              <Grid Grid.Column="5" RowDefinitions="30,Auto" VerticalAlignment="Center" Width="150">
+                <Label Content="编码" Foreground="White" FontSize="15" Grid.Row="0" />
+                <Label Content=" " Foreground="White" FontSize="15" Grid.Row="1" />
+              </Grid>
+              <Grid Grid.Column="6" RowDefinitions="30,Auto" VerticalAlignment="Center" Width="150">
+                <Label Content="接种证号" Foreground="White" FontSize="15" Grid.Row="0" />
+                <Label Content=" " Foreground="White" FontSize="15" Grid.Row="1" />
+              </Grid>
+            </Grid>
+        </StackPanel>
+      </styles:Card>
+
+      <Grid Grid.Row="2" Margin="10 10 10 0">
+        <Border HorizontalAlignment="Stretch">
+          <local:WorkTabControlView HorizontalAlignment="Stretch" Margin="10 0 10 0" DataContext="{Binding WorkTabControlViewModel}" />
+        </Border>
+      </Grid>
+      
+    </Grid>
+  </Grid>
+
+</UserControl>

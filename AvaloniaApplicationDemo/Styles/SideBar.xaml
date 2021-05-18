@@ -1,5 +1,7 @@
 ﻿<Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <StyleInclude Source="avares://Avalonia.Themes.Default/DefaultTheme.xaml"/>
+  <StyleInclude Source="avares://Avalonia.Themes.Default/Accents/BaseLight.xaml"/>
   <Design.PreviewWith>
     <Border Height="720">
       <TabControl Classes="sidebar">
@@ -9,7 +11,7 @@
     </Border>
   </Design.PreviewWith>
   <Style Selector="TabControl.sidebar">
-    <Setter Property="TabStripPlacement" Value="Left"/>
+    <Setter Property="TabStripPlacement" Value="Top"/>
     <Setter Property="Padding" Value="0 0 0 0"/>
     <Setter Property="Background" Value="#3267de"/>
     <Setter Property="Template">
@@ -46,43 +48,6 @@
         </Border>
       </ControlTemplate>
     </Setter>
-    <!--<Setter Property="Template">
-      <ControlTemplate>
-        <Border
-            Margin="{TemplateBinding Margin}"
-            BorderBrush="{TemplateBinding BorderBrush}"
-            BorderThickness="{TemplateBinding BorderThickness}">
-          <DockPanel>
-            <ScrollViewer Width="100" Margin="0 0 0 0"
-                Name="PART_ScrollViewer"
-                HorizontalScrollBarVisibility="{TemplateBinding (ScrollViewer.HorizontalScrollBarVisibility)}"
-                VerticalScrollBarVisibility="{TemplateBinding (ScrollViewer.VerticalScrollBarVisibility)}"
-                Background="{TemplateBinding Background}"
-                DockPanel.Dock="Left">
-              <ItemsPresenter
-                  Name="PART_ItemsPresenter"
-                  Items="{TemplateBinding Items}"
-                  ItemsPanel="{TemplateBinding ItemsPanel}"
-                  ItemTemplate="{TemplateBinding ItemTemplate}">
-              </ItemsPresenter>
-            </ScrollViewer>
-            <ContentControl Content="{TemplateBinding Tag}" HorizontalContentAlignment="Right" DockPanel.Dock="Bottom"/>
-            <ScrollViewer Background="{x:Null}"
-                HorizontalScrollBarVisibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=SelectedItem.(ScrollViewer.HorizontalScrollBarVisibility)}"
-                VerticalScrollBarVisibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=SelectedItem.(ScrollViewer.VerticalScrollBarVisibility)}">
-              <ContentPresenter
-                      Name="PART_SelectedContentHost"
-                      Margin="{TemplateBinding Padding}"
-                      HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
-                      VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
-                      Content="{TemplateBinding SelectedContent}"
-                      ContentTemplate="{TemplateBinding SelectedContentTemplate}">
-              </ContentPresenter>
-            </ScrollViewer>
-          </DockPanel>
-        </Border>
-      </ControlTemplate>
-    </Setter>-->
   </Style>
 
   <Style Selector="TabControl.sidebar > TabItem">
@@ -97,17 +62,20 @@
     <Setter Property="(ScrollViewer.HorizontalScrollBarVisibility)" Value="Auto"/>
     <Setter Property="(ScrollViewer.VerticalScrollBarVisibility)" Value="Auto"/>
   </Style>
-  <Style Selector="TabControl.sidebar > TabItem:selected /template/ Border#PART_SelectedPipe">
+  <!--<Style Selector="TabControl.sidebar > TabItem:selected /template/ Border#PART_SelectedPipe">
     <Setter Property="IsVisible" Value="False" />
-  </Style>
+  </Style>-->
   <Style Selector="TabControl.sidebar > TabItem:selected">
     <Setter Property="Background" Value="#1fffffff"/>
   </Style>
-  <Style Selector="TabControl.sidebar > TabItem:pointerover /template/ Border#PART_LayoutRoot">
+  <Style Selector="TabControl[TabStripPlacement=Left] /template/ Border#HeaderPanelBorder">
+    <Setter Property="Margin" Value="0 0 0 0" />
+  </Style>
+  <!--<Style Selector="TabControl.sidebar > TabItem:pointerover /template/ Border#PART_LayoutRoot">
     <Setter Property="Background" Value="#3fffffff"/>    
-  </Style>
-  <Style Selector="TabControl.sidebar > ItemsPresenter">
+  </Style>-->
+  <!--<Style Selector="TabControl.sidebar > ItemsPresenter">
     <Setter Property="VerticalAlignment" Value="Center"/>
-  </Style>
+  </Style>-->
 
 </Styles>

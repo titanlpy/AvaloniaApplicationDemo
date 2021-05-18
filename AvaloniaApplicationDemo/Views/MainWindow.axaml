@@ -7,14 +7,23 @@
         mc:Ignorable="d" d:DesignWidth="1280" d:DesignHeight="720"
         x:Class="AvaloniaApplicationDemo.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
-        Title="AvaloniaApplicationDemo">
-
+        Title="AvaloniaApplicationDemo"
+        FontFamily="Microsoft YaHei">
+  <Window.Styles>
+    <StyleInclude Source="avares://Avalonia.Themes.Default/DefaultTheme.xaml"/>
+    <Style Selector="TabControl.sidebar > TabItem:selected">
+      <Setter Property="Background" Value="#1fffffff"/>
+    </Style>
+  <Style Selector="TabControl.sidebar > TabItem:pointerover">
+    <Setter Property="Background" Value="#3fffffff"/>    
+  </Style>
+  </Window.Styles>
     <Design.DataContext>
         <vm:MainWindowViewModel/>
     </Design.DataContext>
   <Panel>
     <DockPanel>
-    <TabControl Name="TabControl" Classes="sidebar" Grid.ColumnSpan="2" DockPanel.Dock="Left">
+    <TabControl Name="TabControl" Classes="sidebar" DockPanel.Dock="Left">
         <TabItem>
           <TabItem.Header>
             <Grid RowDefinitions="*,*">
@@ -23,7 +32,7 @@
             </Grid>
           </TabItem.Header>
         <Border HorizontalAlignment="Stretch">
-          <Image Source="/Assets/avalonia-logo.ico" />
+          <local:HomePage HorizontalAlignment="Stretch" Margin="10 0 10 0" DataContext="{Binding HomePageViewModel}" />
         </Border>
       </TabItem>
 
