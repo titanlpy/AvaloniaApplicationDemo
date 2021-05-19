@@ -10,13 +10,28 @@
         Title="AvaloniaApplicationDemo"
         FontFamily="Microsoft YaHei">
   <Window.Styles>
-    <StyleInclude Source="avares://Avalonia.Themes.Default/DefaultTheme.xaml"/>
+    <!--<StyleInclude Source="/Styles/SideBar.xaml" />-->
     <Style Selector="TabControl.sidebar > TabItem:selected">
       <Setter Property="Background" Value="#1fffffff"/>
     </Style>
   <Style Selector="TabControl.sidebar > TabItem:pointerover">
     <Setter Property="Background" Value="#3fffffff"/>    
   </Style>
+   <Style Selector="Button.rightbutton">
+		 <Setter Property="Margin" Value="15,8,9,3"/>
+		 <Setter Property="Width" Value="40"/>
+		 <Setter Property="Height" Value="120"/>
+         <Setter Property="BorderThickness" Value="0"/>
+		 <Setter Property="Background" Value="#E6E6E6"/>
+		 <Setter Property="Padding" Value="6"/>
+		  <Setter Property="Cursor" Value="Hand" />
+      </Style>
+      <Style Selector="Button.rightbutton /template/ ContentPresenter">
+        <Setter Property="CornerRadius" Value="0"/>
+      </Style>
+      <Style Selector="Button:pointerover.rightbutton /template/ ContentPresenter">
+        <Setter Property="Background" Value="#80e0e0e0"/>
+      </Style>
   </Window.Styles>
     <Design.DataContext>
         <vm:MainWindowViewModel/>
@@ -73,6 +88,52 @@
       </TabItem>
       
     </TabControl>
+    	<StackPanel Width="50" Height="870" Background="White" DockPanel.Dock="Right">
+			<Button Margin="0 160 0 0" Content="工作台信息">
+				<Button.Content>
+					<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+						<TextBlock Text="工" />
+						<TextBlock Text="作" />
+						<TextBlock Text="台" />
+						<TextBlock Text="信" />
+						<TextBlock Text="息" />
+					</StackPanel>
+				</Button.Content>
+			</Button>
+			<Button Classes="rightbutton" Content="可接种疫苗">
+				<Button.Content>
+					<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+						<TextBlock Text="可" />
+						<TextBlock Text="接" />
+						<TextBlock Text="种" />
+						<TextBlock Text="疫" />
+						<TextBlock Text="苗" />
+					</StackPanel>
+				</Button.Content>
+			</Button>
+			<Button Classes="rightbutton" Content="历史接种记录">
+				<Button.Content>
+					<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+						<TextBlock Text="历" />
+						<TextBlock Text="史" />
+						<TextBlock Text="接" />
+						<TextBlock Text="种" />
+						<TextBlock Text="记" />
+						<TextBlock Text="录" />
+					</StackPanel>
+				</Button.Content>
+			</Button>
+			<Button x:Name="verbutton" Classes="rightbutton"  Content="疫苗库存">
+				<Button.Content>
+					<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+						<TextBlock Text="疫" />
+						<TextBlock Text="苗" />
+						<TextBlock Text="库" />
+						<TextBlock Text="存" />
+					</StackPanel>
+				</Button.Content>
+			</Button>
+		</StackPanel>
     </DockPanel>
   </Panel>
 </Window>

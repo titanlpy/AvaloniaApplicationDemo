@@ -1,5 +1,5 @@
 <UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:assists="clr-namespace:Material.Styles.Assists"
+             xmlns:assists="clr-namespace:Material.Styles.Assists;assembly=Material.Styles"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -11,7 +11,7 @@
   </Design.DataContext>
   <UserControl.Styles>
     <Style Selector="TabControl">
-      <!--<Setter Property="assists:TabControlAssist.TabHeaderHorizontalAlignment" Value="Left" />-->
+      <Setter Property="assists:TabControlAssist.TabHeaderHorizontalAlignment" Value="Left" />
     </Style>
     <Style Selector="TabControl > TabItem:selected">
       <Setter Property="Background" Value="#3fffffff"/>
@@ -25,7 +25,7 @@
     <TabControl>
       <TabControl.Items>
         <TabItem Header="排队" HorizontalAlignment="Left">
-          <Border HorizontalAlignment="Stretch" Width="1000">
+          <Border HorizontalAlignment="Left" Width="1000">
             <DataGrid Name="datagrid" Items="{Binding Users}" Background="White" CanUserReorderColumns="True">
               <DataGrid.Styles>
                 <Style Selector="TextBlock">
@@ -36,17 +36,17 @@
                   <Setter Property="Background" Value="White" />
                   <Setter Property="SeparatorBrush" Value="Transparent" />
                 </Style>
-                <Style Selector="DataGridRow">
+                <!--<Style Selector="DataGridRow">
                   <Setter Property="Background" Value="White" />
-                </Style>
+                </Style>-->
               </DataGrid.Styles>
               <DataGrid.Columns>
-                <DataGridTextColumn Header="登录名" Width="2*" Binding="{Binding UserName}"/>
+                <DataGridTextColumn Header="门诊号" Width="*" Binding="{Binding OpdNo}"/>
                 <DataGridTextColumn Header="姓名" Width="*" Binding="{Binding Name}"/>
-                <DataGridTextColumn Header="部门" Width="*" Binding="{Binding Department}"/>
-                <DataGridTextColumn Header="手机" Width="*" Binding="{Binding PhoneNumber}"/>
-                <DataGridTextColumn Header="状态" Width="*" Binding="{Binding State}"/>
-                <DataGridTextColumn Header="创建时间" Width="2*" Binding="{Binding CreateTime}"/>
+                <DataGridTextColumn Header="预约" Width="*" Binding="{Binding Reserve}"/>
+                <DataGridTextColumn Header="业务" Width="*" Binding="{Binding Business}"/>
+                <DataGridTextColumn Header="客户端" Width="*" Binding="{Binding Client}"/>
+                <DataGridTextColumn Header="状态" Width="2*" Binding="{Binding State}"/>
                 <DataGridTemplateColumn Header="操作">
                   <DataGridTemplateColumn.CellTemplate>
                     <DataTemplate>
