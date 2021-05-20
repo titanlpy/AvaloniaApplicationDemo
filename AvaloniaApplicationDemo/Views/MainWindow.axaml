@@ -3,6 +3,7 @@
         xmlns:vm="using:AvaloniaApplicationDemo.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mstyles="clr-namespace:Material.Styles;assembly=Material.Styles"
         xmlns:local="clr-namespace:AvaloniaApplicationDemo.Views"
         mc:Ignorable="d" d:DesignWidth="1280" d:DesignHeight="720"
         x:Class="AvaloniaApplicationDemo.Views.MainWindow"
@@ -10,7 +11,7 @@
         Title="AvaloniaApplicationDemo"
         FontFamily="Microsoft YaHei">
   <Window.Styles>
-    <!--<StyleInclude Source="/Styles/SideBar.xaml" />-->
+    <StyleInclude Source="/Styles/SideBar.xaml" />
     <Style Selector="TabControl.sidebar > TabItem:selected">
       <Setter Property="Background" Value="#1fffffff"/>
     </Style>
@@ -32,13 +33,16 @@
       <Style Selector="Button:pointerover.rightbutton /template/ ContentPresenter">
         <Setter Property="Background" Value="#80e0e0e0"/>
       </Style>
+  
   </Window.Styles>
     <Design.DataContext>
         <vm:MainWindowViewModel/>
     </Design.DataContext>
   <Panel>
+    <Viewbox Stretch="Fill">
+      <Canvas Width="1280" Height="720">
     <DockPanel>
-    <TabControl Name="TabControl" Classes="sidebar" DockPanel.Dock="Left">
+    <TabControl Name="TabControl" Classes="sidebar" DockPanel.Dock="Left" VerticalAlignment="Top">
         <TabItem>
           <TabItem.Header>
             <Grid RowDefinitions="*,*">
@@ -46,7 +50,10 @@
               <TextBlock Text="主页" Grid.Row="1" HorizontalAlignment="Center"/>
             </Grid>
           </TabItem.Header>
-        <Border HorizontalAlignment="Stretch">
+        <Border HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="-10 0 0 0" Height="720">
+          <Border.Styles>
+                  <StyleInclude Source="avares://Material.Avalonia/Material.Avalonia.Templates.xaml" />
+          </Border.Styles>
           <local:HomePage HorizontalAlignment="Stretch" Margin="10 0 10 0" DataContext="{Binding HomePageViewModel}" />
         </Border>
       </TabItem>
@@ -59,7 +66,7 @@
           </Grid>
         </TabItem.Header>
         <Border HorizontalAlignment="Stretch">
-
+            <Image Source="/Assets/avalonia-logo.ico"/>
         </Border>
       </TabItem>
 
@@ -88,11 +95,11 @@
       </TabItem>
       
     </TabControl>
-    	<StackPanel Width="50" Height="870" Background="White" DockPanel.Dock="Right">
-			<Button Margin="0 160 0 0" Content="工作台信息">
+    	<StackPanel Width="50" Height="870" Background="Transparent" DockPanel.Dock="Right" Margin="-260 0 0 0">
+			<Button Classes="rightbutton" Content="工作台信息">
 				<Button.Content>
 					<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-						<TextBlock Text="工" />
+						<TextBlock Text="工"/>
 						<TextBlock Text="作" />
 						<TextBlock Text="台" />
 						<TextBlock Text="信" />
@@ -135,5 +142,7 @@
 			</Button>
 		</StackPanel>
     </DockPanel>
+        </Canvas>
+      </Viewbox>
   </Panel>
 </Window>

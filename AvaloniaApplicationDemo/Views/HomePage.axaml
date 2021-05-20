@@ -5,6 +5,7 @@
         xmlns:vm="using:AvaloniaApplicationDemo.ViewModels"
         xmlns:local="clr-namespace:AvaloniaApplicationDemo.Views"
         xmlns:styles="clr-namespace:Material.Styles;assembly=Material.Styles"
+        xmlns:assists="clr-namespace:Material.Styles.Assists;assembly=Material.Styles"
         mc:Ignorable="d" d:DesignWidth="1180" d:DesignHeight="720"
         x:Class="AvaloniaApplicationDemo.Views.HomePage"
              FontFamily="Microsoft YaHei">
@@ -16,26 +17,39 @@
       <Setter Property="Background" Value="Yellow"/>
     </Style>
     <Style Selector="Button.Light">
-      <Setter Property="Background" Value="#3fffffff"/>
+      <Setter Property="Background" Value="Transparent"/>
       <Setter Property="Foreground" Value="#5b5b5b"/>
       <Setter Property="Width" Value="90"/>
       <Setter Property="Height" Value="45"/>
     </Style>
+    <Style Selector="Button.Light:pointerover /template/ ContentPresenter">
+      <Setter Property="Background" Value="Transparent" />
+    </Style>
+    <Style Selector="Button.Light:not(.disabled):pointerover /template/ Border#PART_HoverIndicator">
+      <Setter Property="Background" Value="Transparent" />
+    </Style>
+    <Style
+    Selector="Button.Light:pointerover:not(.no-material) /template/ Border#PART_ButtonRootBorder">
+      <Setter Property="assists:ShadowAssist.Darken" Value="True" />
+    </Style>
+    <!--<Style Selector="Button.Light:not(.Inline)">
+      <Setter Property="Background" Value="Transparent" />
+    </Style>-->
   </UserControl.Styles>
   <Grid>
     <Grid RowDefinitions="Auto,Auto,Auto,Auto">
-      <styles:Card VerticalAlignment="Top" Height=" 60" Background="#f5f5f5" Grid.Row="0">
+      <styles:Card HorizontalAlignment="Left" Width="1280" Height=" 60" Background="#f5f5f5" Grid.Row="0" Margin="0 0 0 0">
         <StackPanel Margin="0,4">
           <Grid ColumnDefinitions="Auto,Auto,Auto,Auto">
             <TextBlock Classes="Headline7" Text="沈苏预防接种数字化门诊系统软件" Width="1000" FontSize="16" Grid.Column="0"/>
-            <Image Source="/Assets/avalonia-logo.ico" Width="40" Height="40" Margin="0 -10 0 0"  Grid.Column="1"/>
+            <Image Source="/Assets/avalonia-logo.ico" Width="40" Height="40" Grid.Column="1"/>
             <Label Content="问诊1"  Grid.Column="2" VerticalContentAlignment="Stretch"/>
             <Label Content="admin"  Grid.Column="3" VerticalContentAlignment="Stretch"/>
           </Grid>
         </StackPanel>
       </styles:Card>
 
-      <styles:Card VerticalAlignment="Top" Height=" 120" Grid.Row="1" Margin="10 10 10 0">
+      <styles:Card HorizontalAlignment="Left" Width="1100" Height=" 120" Grid.Row="1" Margin="20 10 10 0">
         <styles:Card.Background>
           <ImageBrush Source="/Assets/back_szz.png" Stretch="Fill"/>
         </styles:Card.Background>
@@ -74,12 +88,16 @@
 
       <Grid Grid.Row="2" Margin="10 10 10 0" Height="410">
         <Border HorizontalAlignment="Stretch">
-          <local:WorkTabControlView HorizontalAlignment="Stretch" Margin="10 0 10 0" DataContext="{Binding WorkTabControlViewModel}" />
+          <local:WorkTabControlView HorizontalAlignment="Stretch" Margin="10 0 10 0">
+            <local:WorkTabControlView.DataContext>
+              <vm:WorkTabControlViewModel />
+            </local:WorkTabControlView.DataContext>
+          </local:WorkTabControlView>
         </Border>
       </Grid>
 
-      <Grid Grid.Row="3" Margin="0 10 0 0">
-          <DockPanel HorizontalAlignment="Center" Opacity="30">
+      <Grid Grid.Row="3" Margin="0 0 0 0">
+          <DockPanel HorizontalAlignment="Center">
             <Button Classes="Light" Content="断开"/>
             <Button Classes="Light" Content="呼叫" Margin="10"/>
             <Button Classes="Light" Content="暂停"/>
@@ -89,7 +107,15 @@
           </DockPanel>
       </Grid>
     </Grid>
-    
-  </Grid>
 
+    <styles:Card VerticalAlignment="Bottom" Height=" 30" Background="#f5f5f5" Grid.Row="4">
+      <StackPanel Margin="0,4">
+        <DockPanel Margin="0 -15 0 0">
+          <TextBlock Text="登陆时间：2021-5-20" HorizontalAlignment="Left" FontSize="15" Margin="20 0 0 0"/>
+          <TextBlock Text="版本：1.0.0" HorizontalAlignment="Right" FontSize="15" Margin="0 0 100 0"/>
+        </DockPanel>
+      </StackPanel>
+    </styles:Card>
+
+  </Grid>
 </UserControl>

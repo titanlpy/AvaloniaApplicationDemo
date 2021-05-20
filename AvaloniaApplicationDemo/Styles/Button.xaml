@@ -8,16 +8,16 @@
 
   <Style Selector="Button.leftbutton">
     <Setter Property="Margin" Value="0 5 0 5"/>
-    <Setter Property="Width" Value="50"/>
-    <Setter Property="Height" Value="50"/>
+    <Setter Property="Width" Value="70"/>
+    <Setter Property="Height" Value="70"/>
     <Setter Property="IsEnabled" Value="False"/>
     <Setter Property="BorderThickness" Value="0"/>
     <Setter Property="Background" Value="Transparent"/>
+    
     <!--<Setter Property="Padding" Value="6"/>-->
   </Style>
   <Style Selector="Button.leftbutton /template/ ContentPresenter">
     <Setter Property="CornerRadius" Value="100"/>
-    <Setter Property="BorderBrush" Value="1"/>
   </Style>
   <!--<Style Selector="Button:pointerover.leftbutton /template/ ContentPresenter">
     <Setter Property="Background" Value="#80e0e0e0"/>

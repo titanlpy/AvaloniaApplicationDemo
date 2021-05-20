@@ -5,7 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
             xmlns:vm="using:AvaloniaApplicationDemo.ViewModels"
              mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="500"
-             x:Class="AvaloniaApplicationDemo.Views.WorkTabControlView">
+             x:Class="AvaloniaApplicationDemo.Views.WorkTabControlView"
+             FontFamily="Microsoft YaHei">
   <Design.DataContext>
     <vm:WorkTabControlViewModel/>
   </Design.DataContext>
@@ -20,38 +21,55 @@
     <Style Selector="TabControl > TabItem:pointerover">
       <Setter Property="Background" Value="#3fffffff"/>
     </Style>
+    <Style Selector="TextBlock">
+      <Setter Property="HorizontalAlignment" Value="Left" />
+    </Style>
+    <Style Selector="DataGrid">
+      <Setter Property="HorizontalGridLinesBrush" Value="#E7EAEC"/>
+      <Setter Property="BorderThickness" Value="0"/>
+    </Style>
+    <Style Selector="DataGridColumnHeader">
+      <Setter Property="HorizontalAlignment" Value="Left" />
+      <Setter Property="Background" Value="Transparent" />
+      <Setter Property="SeparatorBrush" Value="Transparent" />
+    </Style>
+    <Style Selector="DataGridRow:selected /template/ Rectangle#BackgroundRectangle">
+      <Setter Property="Fill" Value="#78BCFF"></Setter>
+      <Setter Property="IsVisible" Value="True"/>
+      <Setter Property="Opacity" Value="1"/>
+    </Style>
+    <Style Selector="DataGridRow:pointerover /template/ Rectangle#BackgroundRectangle">
+      <Setter Property="Fill" Value="#78BCFF"></Setter>
+      <Setter Property="IsVisible" Value="True"/>
+      <Setter Property="Opacity" Value="100"/>
+    </Style>
+    <Style Selector="DataGridColumnHeader">
+      <Setter Property="FontSize" Value="15"/>
+      <Setter Property="HorizontalContentAlignment" Value="Left"/>
+      <Setter Property="VerticalContentAlignment" Value="Center"/>
+      <Setter Property="Height" Value="50"/>
+    </Style>
   </UserControl.Styles>
+  
   <DockPanel>
     <TabControl>
       <TabControl.Items>
         <TabItem Header="排队" HorizontalAlignment="Left">
-          <Border HorizontalAlignment="Left" Width="1000">
-            <DataGrid Name="datagrid" Items="{Binding Users}" Background="White" CanUserReorderColumns="True">
-              <DataGrid.Styles>
-                <Style Selector="TextBlock">
-                  <Setter Property="HorizontalAlignment" Value="Left" />
-                </Style>
-                <Style Selector="DataGridColumnHeader">
-                  <Setter Property="HorizontalAlignment" Value="Left" />
-                  <Setter Property="Background" Value="White" />
-                  <Setter Property="SeparatorBrush" Value="Transparent" />
-                </Style>
-                <!--<Style Selector="DataGridRow">
-                  <Setter Property="Background" Value="White" />
-                </Style>-->
-              </DataGrid.Styles>
+          <Border HorizontalAlignment="Left" Width="1100">
+            <DataGrid Name="datagrid" Items="{Binding Users}" Background="Transparent" CanUserReorderColumns="True">
               <DataGrid.Columns>
                 <DataGridTextColumn Header="门诊号" Width="*" Binding="{Binding OpdNo}"/>
                 <DataGridTextColumn Header="姓名" Width="*" Binding="{Binding Name}"/>
                 <DataGridTextColumn Header="预约" Width="*" Binding="{Binding Reserve}"/>
                 <DataGridTextColumn Header="业务" Width="*" Binding="{Binding Business}"/>
                 <DataGridTextColumn Header="客户端" Width="*" Binding="{Binding Client}"/>
-                <DataGridTextColumn Header="状态" Width="2*" Binding="{Binding State}"/>
-                <DataGridTemplateColumn Header="操作">
+                <DataGridTextColumn Header="状态" Width="*" Binding="{Binding State}"/>
+                <DataGridTemplateColumn Header="操作" >
                   <DataGridTemplateColumn.CellTemplate>
                     <DataTemplate>
-                      <StackPanel>
-                        <Button Content="编辑" Background="#f0ad4e"/>
+                      <StackPanel Orientation="Horizontal">
+                        <Button Content="优先" Background="#f0ad4e"/>
+                        <Button Content="叫号" Background="#f0ad4e"/>
                       </StackPanel>
                     </DataTemplate>
                   </DataGridTemplateColumn.CellTemplate>
