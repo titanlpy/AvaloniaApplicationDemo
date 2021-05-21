@@ -42,7 +42,7 @@
         <StackPanel Margin="0,4">
           <Grid ColumnDefinitions="Auto,Auto,Auto,Auto">
             <TextBlock Classes="Headline7" Text="沈苏预防接种数字化门诊系统软件" Width="1000" FontSize="16" Grid.Column="0"/>
-            <Image Source="/Assets/avalonia-logo.ico" Width="40" Height="40" Grid.Column="1"/>
+            <Image Source="/Assets/avalonia-logo.ico" Width="40" Height="40" Grid.Column="1" Margin="0 -8 10 0"/>
             <Label Content="问诊1"  Grid.Column="2" VerticalContentAlignment="Stretch"/>
             <Label Content="admin"  Grid.Column="3" VerticalContentAlignment="Stretch"/>
           </Grid>

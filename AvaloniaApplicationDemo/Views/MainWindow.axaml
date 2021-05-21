@@ -99,11 +99,12 @@
 			<Button Classes="rightbutton" Content="工作台信息">
 				<Button.Content>
 					<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-						<TextBlock Text="工"/>
+              <TextBlock Text="工"/>
 						<TextBlock Text="作" />
 						<TextBlock Text="台" />
 						<TextBlock Text="信" />
 						<TextBlock Text="息" />
+          <Popup VerticalOffset="-160" HorizontalOffset="-50" Child="{Binding ChildCanInocBacts}" IsOpen="{Binding CanInocBactsOpen}"/>
 					</StackPanel>
 				</Button.Content>
 			</Button>
@@ -130,10 +131,10 @@
 					</StackPanel>
 				</Button.Content>
 			</Button>
-			<Button x:Name="verbutton" Classes="rightbutton"  Content="疫苗库存">
+			<Button Classes="rightbutton"  Content="疫苗库存">
 				<Button.Content>
 					<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-						<TextBlock Text="疫" />
+						<TextBlock Text="疫"/>
 						<TextBlock Text="苗" />
 						<TextBlock Text="库" />
 						<TextBlock Text="存" />

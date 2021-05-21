@@ -27,11 +27,7 @@
     <Style Selector="DataGrid">
       <Setter Property="HorizontalGridLinesBrush" Value="#E7EAEC"/>
       <Setter Property="BorderThickness" Value="0"/>
-    </Style>
-    <Style Selector="DataGridColumnHeader">
-      <Setter Property="HorizontalAlignment" Value="Left" />
-      <Setter Property="Background" Value="Transparent" />
-      <Setter Property="SeparatorBrush" Value="Transparent" />
+      <Setter Property="RowHeight" Value="50"/>
     </Style>
     <Style Selector="DataGridRow:selected /template/ Rectangle#BackgroundRectangle">
       <Setter Property="Fill" Value="#78BCFF"></Setter>
@@ -48,6 +44,17 @@
       <Setter Property="HorizontalContentAlignment" Value="Left"/>
       <Setter Property="VerticalContentAlignment" Value="Center"/>
       <Setter Property="Height" Value="50"/>
+      <Setter Property="SeparatorBrush" Value="Transparent" />
+      <Setter Property="HorizontalAlignment" Value="Left" />
+      <Setter Property="Background" Value="Transparent" />
+    </Style>
+    <Style Selector="DataGridCell.gdp">
+      <Setter Property="Margin" Value="-48 0 0 0" />
+    </Style>
+    <Style Selector="Button">
+      <Setter Property="Background" Value="White" />
+      <Setter Property="Width" Value="60" />
+      <Setter Property="Height" Value="35" />
     </Style>
   </UserControl.Styles>
   
@@ -64,12 +71,20 @@
                 <DataGridTextColumn Header="业务" Width="*" Binding="{Binding Business}"/>
                 <DataGridTextColumn Header="客户端" Width="*" Binding="{Binding Client}"/>
                 <DataGridTextColumn Header="状态" Width="*" Binding="{Binding State}"/>
-                <DataGridTemplateColumn Header="操作" >
+                <DataGridTemplateColumn Header="操作" CellStyleClasses="gdp">
                   <DataGridTemplateColumn.CellTemplate>
                     <DataTemplate>
                       <StackPanel Orientation="Horizontal">
-                        <Button Content="优先" Background="#f0ad4e"/>
-                        <Button Content="叫号" Background="#f0ad4e"/>
+                        <Button Content="优先" Classes="cellbutton_first">
+                          <Button.Styles>
+                            <StyleInclude Source="/Styles/Button.xaml" />
+                          </Button.Styles>
+                        </Button>
+                        <Button Content="叫号" Classes="cellbutton_call" Margin="10 0 0 0">
+                          <Button.Styles>
+                            <StyleInclude Source="/Styles/Button.xaml" />
+                          </Button.Styles>
+                        </Button>
                       </StackPanel>
                     </DataTemplate>
                   </DataGridTemplateColumn.CellTemplate>

@@ -273,3 +273,4 @@ F:\GitHubRepository\AvaloniaApplicationDemo\AvaloniaApplicationDemo\bin\Debug\ne
 F:\GitHubRepository\AvaloniaApplicationDemo\AvaloniaApplicationDemo\bin\Debug\net5.0\Material.Icons.dll
 F:\GitHubRepository\AvaloniaApplicationDemo\AvaloniaApplicationDemo\bin\Debug\net5.0\Material.Icons.Avalonia.dll
 F:\GitHubRepository\AvaloniaApplicationDemo\AvaloniaApplicationDemo\bin\Debug\net5.0\Newtonsoft.Json.dll
+F:\GitHubRepository\AvaloniaApplicationDemo\AvaloniaApplicationDemo\obj\Debug\net5.0\AvaloniaApplicationDemo.csproj.AssemblyReference.cache
