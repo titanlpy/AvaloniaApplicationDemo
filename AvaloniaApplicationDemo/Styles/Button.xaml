@@ -2,19 +2,15 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <Design.PreviewWith>
     <Border Height="200" Width="200">
-      <Button Classes="cellbutton_call" HorizontalAlignment="Center" Height="50" Width="100"/>
+      <Button Classes="leftbutton" HorizontalAlignment="Center"/>
     </Border>
   </Design.PreviewWith>
-  <StyleInclude Source="avares://Avalonia.Themes.Default/DefaultTheme.xaml"/>
   <Style Selector="Button.leftbutton">
-    <Setter Property="Margin" Value="0 5 0 5"/>
+    <Setter Property="Margin" Value="0 0 0 0"/>
     <Setter Property="Width" Value="70"/>
     <Setter Property="Height" Value="70"/>
-    <Setter Property="IsEnabled" Value="False"/>
-    <Setter Property="BorderThickness" Value="0"/>
-    <Setter Property="Background" Value="Transparent"/>
-    
-    <!--<Setter Property="Padding" Value="6"/>-->
+    <Setter Property="IsCancel" Value="False"/>
+    <Setter Property="Background" Value="Yellow"/>
   </Style>
   <Style Selector="Button.leftbutton /template/ ContentPresenter">
     <Setter Property="CornerRadius" Value="100"/>
@@ -25,11 +21,11 @@
   <Style Selector="Button.cellbutton_first /template/ ContentPresenter">
     <Setter Property="CornerRadius" Value="100"/>
     <Setter Property="BorderBrush" Value="#F8A610"/>
-    <Setter Property="BorderThickness" Value="2"/>
+    <Setter Property="BorderThickness" Value="1"/>
   </Style>
   <Style Selector="Button.cellbutton_call /template/ ContentPresenter">
     <Setter Property="CornerRadius" Value="100"/>
     <Setter Property="BorderBrush" Value="#077C07"/>
-    <Setter Property="BorderThickness" Value="2"/>
+    <Setter Property="BorderThickness" Value="1"/>
   </Style>
 </Styles>

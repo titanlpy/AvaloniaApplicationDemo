@@ -1,29 +1,25 @@
 <UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:assists="clr-namespace:Material.Styles.Assists;assembly=Material.Styles"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
             xmlns:vm="using:AvaloniaApplicationDemo.ViewModels"
-             mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="500"
+             mc:Ignorable="d" d:DesignWidth="1920" d:DesignHeight="1080"
              x:Class="AvaloniaApplicationDemo.Views.WorkTabControlView"
              FontFamily="Microsoft YaHei">
   <Design.DataContext>
     <vm:WorkTabControlViewModel/>
   </Design.DataContext>
   <UserControl.Styles>
-    <Style Selector="TabControl">
-      <Setter Property="assists:TabControlAssist.TabHeaderHorizontalAlignment" Value="Left" />
-    </Style>
     <Style Selector="TabControl > TabItem:selected">
-      <Setter Property="Background" Value="#3fffffff"/>
-      <Setter Property="FontSize" Value="14"/>
+      <Setter Property="FontSize" Value="19"/>
     </Style>
-    <Style Selector="TabControl > TabItem:pointerover">
-      <Setter Property="Background" Value="#3fffffff"/>
+    <Style Selector="TabControl > TabItem">
+      <Setter Property="FontSize" Value="16"/>
+      <Setter Property="Width" Value="65"/>
     </Style>
-    <Style Selector="TextBlock">
+    <!--<Style Selector="TextBlock">
       <Setter Property="HorizontalAlignment" Value="Left" />
-    </Style>
+    </Style>-->
     <Style Selector="DataGrid">
       <Setter Property="HorizontalGridLinesBrush" Value="#E7EAEC"/>
       <Setter Property="BorderThickness" Value="0"/>
@@ -94,7 +90,7 @@
           </Border>
         </TabItem>
         <TabItem Header="业务" HorizontalAlignment="Left">
-          <TextBlock Classes="Centered" Text="Page 2" />
+          <TextBlock Text="Page 2" />
         </TabItem>
 
       </TabControl.Items>

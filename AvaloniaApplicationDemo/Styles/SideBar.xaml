@@ -1,11 +1,26 @@
 ﻿<Styles xmlns="https://github.com/avaloniaui"
+         xmlns:local="clr-namespace:AvaloniaApplicationDemo.Views"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <StyleInclude Source="avares://Avalonia.Themes.Default/DefaultTheme.xaml"/>
+  <StyleInclude Source="/Styles/Button.xaml" />
   <Design.PreviewWith>
     <Border Height="720">
       <TabControl Classes="sidebar">
-        <TabItem Header="Item1"/>
-        <TabItem Header="Item2"/>
+        <TabItem>
+          <TabItem.Header>
+            <Grid RowDefinitions="*,*">
+              <TextBlock Text="工作台" Grid.Row="1" HorizontalAlignment="Center"/>
+            </Grid>
+          </TabItem.Header>
+
+        </TabItem>
+        <TabItem>
+          <TabItem.Header>
+            <Grid RowDefinitions="*,*">
+              <TextBlock Text="工作台" Grid.Row="1" HorizontalAlignment="Center"/>
+            </Grid>
+          </TabItem.Header>
+
+        </TabItem>
       </TabControl>
     </Border>
   </Design.PreviewWith>
@@ -58,8 +73,8 @@
     <Setter Property="Foreground" Value="White" />
     <Setter Property="HorizontalContentAlignment" Value="Center" />
     <Setter Property="VerticalContentAlignment" Value="Center" />
-    <Setter Property="(ScrollViewer.HorizontalScrollBarVisibility)" Value="Auto"/>
-    <Setter Property="(ScrollViewer.VerticalScrollBarVisibility)" Value="Auto"/>
+    <Setter Property="(ScrollViewer.HorizontalScrollBarVisibility)" Value="Disabled"/>
+    <Setter Property="(ScrollViewer.VerticalScrollBarVisibility)" Value="Disabled"/>
   </Style>
 
   <Style Selector="TabControl.sidebar > TabItem:selected">

@@ -265,12 +265,4 @@ F:\GitHubRepository\AvaloniaApplicationDemo\AvaloniaApplicationDemo\obj\Debug\ne
 F:\GitHubRepository\AvaloniaApplicationDemo\AvaloniaApplicationDemo\obj\Debug\net5.0\AvaloniaApplicationDemo.dll
 F:\GitHubRepository\AvaloniaApplicationDemo\AvaloniaApplicationDemo\obj\Debug\net5.0\AvaloniaApplicationDemo.pdb
 F:\GitHubRepository\AvaloniaApplicationDemo\AvaloniaApplicationDemo\obj\Debug\net5.0\AvaloniaApplicationDemo.genruntimeconfig.cache
-F:\GitHubRepository\AvaloniaApplicationDemo\AvaloniaApplicationDemo\bin\Debug\net5.0\Material.Avalonia.dll
-F:\GitHubRepository\AvaloniaApplicationDemo\AvaloniaApplicationDemo\bin\Debug\net5.0\Material.Colors.dll
-F:\GitHubRepository\AvaloniaApplicationDemo\AvaloniaApplicationDemo\bin\Debug\net5.0\Material.DataGrid.dll
-F:\GitHubRepository\AvaloniaApplicationDemo\AvaloniaApplicationDemo\bin\Debug\net5.0\Material.Ripple.dll
-F:\GitHubRepository\AvaloniaApplicationDemo\AvaloniaApplicationDemo\bin\Debug\net5.0\Material.Styles.dll
-F:\GitHubRepository\AvaloniaApplicationDemo\AvaloniaApplicationDemo\bin\Debug\net5.0\Material.Icons.dll
-F:\GitHubRepository\AvaloniaApplicationDemo\AvaloniaApplicationDemo\bin\Debug\net5.0\Material.Icons.Avalonia.dll
-F:\GitHubRepository\AvaloniaApplicationDemo\AvaloniaApplicationDemo\bin\Debug\net5.0\Newtonsoft.Json.dll
 F:\GitHubRepository\AvaloniaApplicationDemo\AvaloniaApplicationDemo\obj\Debug\net5.0\AvaloniaApplicationDemo.csproj.AssemblyReference.cache
