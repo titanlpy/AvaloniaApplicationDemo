@@ -47,6 +47,15 @@
             </ControlTemplate>
          </Setter>
       </Style>
+    
+     <Style Selector="Label.itemLabel">
+         <Setter Property="Template">
+            <ControlTemplate>
+                <Border Background="White" BoxShadow="1 2 10 1 #90676767" Margin="0 0 0 10" Height="60" Width="60" CornerRadius="100">
+                </Border>
+            </ControlTemplate>
+         </Setter>
+      </Style>
    
   </Window.Styles>
   
@@ -73,7 +82,7 @@
         <TabItem>
           <TabItem.Header>
             <Grid RowDefinitions="*,*">
-              <Button Classes="leftbutton" Grid.Row="0"/>
+              <Label Classes="itemLabel"/>
               <TextBlock Text="主页" Grid.Row="1" HorizontalAlignment="Center"/>
             </Grid>
           </TabItem.Header>
@@ -85,7 +94,7 @@
         <TabItem>
           <TabItem.Header>
             <Grid RowDefinitions="*,*">
-              <Button Classes="leftbutton" Grid.Row="0"/>
+              <Label Classes="itemLabel"/>
               <TextBlock Text="工作台" Grid.Row="1" HorizontalAlignment="Center"/>
             </Grid>
           </TabItem.Header>
@@ -98,7 +107,7 @@
         <TabItem>
           <TabItem.Header>
             <Grid RowDefinitions="*,*">
-              <Button Classes="leftbutton" Grid.Row="0"/>
+              <Label Classes="itemLabel"/>
               <TextBlock Text="控制器" Grid.Row="1" HorizontalAlignment="Center"/>
             </Grid>
           </TabItem.Header>
@@ -109,7 +118,7 @@
         <TabItem>
           <TabItem.Header>
             <Grid RowDefinitions="*,*">
-              <Button Classes="leftbutton" Grid.Row="0"/>
+              <Label Classes="itemLabel"/>
               <TextBlock Text="配置" Grid.Row="1" HorizontalAlignment="Center"/>
             </Grid>
           </TabItem.Header>
