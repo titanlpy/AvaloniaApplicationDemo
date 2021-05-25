@@ -56,7 +56,17 @@
             </ControlTemplate>
          </Setter>
       </Style>
-   
+
+    <Style Selector="Label.BottomLabel">
+      <Setter Property="Template">
+        <ControlTemplate>
+          <Border Background="#F5F5F5" BoxShadow="1 2 10 1 #90676767" Margin="0 5 0 0">
+            
+          </Border>
+        </ControlTemplate>
+      </Setter>
+    </Style>
+    
   </Window.Styles>
   
     <Design.DataContext>
@@ -129,10 +139,10 @@
 
       </TabControl>
             </Grid>
-        
-        
-               <Grid Grid.Row="2" Grid.Column="1">
-               <Label Content="侧栏" Background="Yellow" Foreground="WhiteSmoke"/>
+
+          <Grid Grid.Row="2" Grid.Column="0" Background="#3267de" Margin="0 -1 0 0"/>
+               <Grid Grid.Row="2" Grid.Column="2">
+                 <Label Classes="BottomLabel" Height="40"/>
             </Grid>
         </Grid>
           

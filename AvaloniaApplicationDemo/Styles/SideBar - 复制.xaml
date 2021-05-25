@@ -1,86 +1,26 @@
 ﻿<Styles xmlns="https://github.com/avaloniaui"
          xmlns:local="clr-namespace:AvaloniaApplicationDemo.Views"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <StyleInclude Source="/Styles/Button.xaml" />
   <Design.PreviewWith>
     <Border Height="720">
       <TabControl Classes="sidebar">
-        <TabItem>
-          <TabItem.Header>
-            <Grid RowDefinitions="*,*">
-              <TextBlock Text="工作台" Grid.Row="1" HorizontalAlignment="Center"/>
-            </Grid>
-          </TabItem.Header>
-
-        </TabItem>
-        <TabItem>
-          <TabItem.Header>
-            <Grid RowDefinitions="*,*">
-              <TextBlock Text="工作台" Grid.Row="1" HorizontalAlignment="Center"/>
-            </Grid>
-          </TabItem.Header>
-
+        <TabItem Header="22">
+          
         </TabItem>
       </TabControl>
     </Border>
   </Design.PreviewWith>
-  <Style Selector="TabControl.sidebar">
+  
+  <Style Selector="TabControl">
     <Setter Property="TabStripPlacement" Value="Top"/>
     <Setter Property="Padding" Value="0 0 0 0"/>
     <Setter Property="Background" Value="#3267de"/>
     <Setter Property="Template">
       <ControlTemplate>
         <Border>
-          <DockPanel>
-            <ScrollViewer Width="100" Margin="0 0 0 0"
-                HorizontalScrollBarVisibility="{TemplateBinding (ScrollViewer.HorizontalScrollBarVisibility)}"
-                VerticalScrollBarVisibility="{TemplateBinding (ScrollViewer.VerticalScrollBarVisibility)}"
-                Background="{TemplateBinding Background}"
-                DockPanel.Dock="Left">
-              <ItemsPresenter
-                  Name="PART_ItemsPresenter"
-                  Items="{TemplateBinding Items}"
-                  VerticalAlignment="Center"
-                  ItemsPanel="{TemplateBinding ItemsPanel}"
-                  ItemTemplate="{TemplateBinding ItemTemplate}">
-              </ItemsPresenter>
-            </ScrollViewer>
-            <ContentControl Content="{TemplateBinding Tag}" HorizontalContentAlignment="Right" DockPanel.Dock="Bottom"/>
-            <ScrollViewer Background="{x:Null}"
-                HorizontalScrollBarVisibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=SelectedItem.(ScrollViewer.HorizontalScrollBarVisibility)}"
-                VerticalScrollBarVisibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=SelectedItem.(ScrollViewer.VerticalScrollBarVisibility)}">
-              <ContentPresenter
-                      Name="PART_SelectedContentHost"
-                      Margin="{TemplateBinding Padding}"
-                      HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
-                      VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
-                      Content="{TemplateBinding SelectedContent}"
-                      ContentTemplate="{TemplateBinding SelectedContentTemplate}">
-              </ContentPresenter>
-            </ScrollViewer>
-          </DockPanel>
+         <Label Content="sss"/>
         </Border>
       </ControlTemplate>
     </Setter>
-  </Style>
-
-  <Style Selector="TabControl.sidebar > TabItem">
-    <Setter Property="BorderThickness" Value="0"/>    
-    <Setter Property="FontSize" Value="15"/>
-    <Setter Property="Margin" Value="0"/>
-    <Setter Property="Padding" Value="0 10 5 10"/>    
-    <Setter Property="Width" Value="100" />
-    <Setter Property="Foreground" Value="White" />
-    <Setter Property="HorizontalContentAlignment" Value="Center" />
-    <Setter Property="VerticalContentAlignment" Value="Center" />
-    <Setter Property="(ScrollViewer.HorizontalScrollBarVisibility)" Value="Auto"/>
-    <Setter Property="(ScrollViewer.VerticalScrollBarVisibility)" Value="Auto"/>
-  </Style>
-
-  <Style Selector="TabControl.sidebar > TabItem:selected">
-    <Setter Property="Background" Value="#30ffffff"/>
-  </Style>
-  <Style Selector="TabControl[TabStripPlacement=Left] /template/ Border#HeaderPanelBorder">
-    <Setter Property="Margin" Value="0 0 0 0" />
   </Style>
 </Styles>

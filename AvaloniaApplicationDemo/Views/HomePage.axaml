@@ -13,25 +13,12 @@
     <vm:HomePageViewModel/>
   </Design.DataContext>
   <UserControl.Styles>
+    <StyleInclude Source="/Styles/Button.xaml" />
     <Style Selector="TabControl.sidebar > TabItem:selected">
       <Setter Property="Background" Value="Yellow"/>
     </Style>
-    <Style Selector="Button.Light">
-      <Setter Property="Background" Value="Transparent"/>
-      <Setter Property="Foreground" Value="#5b5b5b"/>
-      <Setter Property="Width" Value="90"/>
-      <Setter Property="Height" Value="45"/>
-    </Style>
-    <Style Selector="Button.Light:pointerover /template/ ContentPresenter">
-      <Setter Property="Background" Value="Transparent" />
-    </Style>
-    <Style Selector="Button.Light:not(.disabled):pointerover /template/ Border#PART_HoverIndicator">
-      <Setter Property="Background" Value="Transparent" />
-    </Style>
-    <Style
-    Selector="Button.Light:pointerover:not(.no-material) /template/ Border#PART_ButtonRootBorder">
-      <!--<Setter Property="assists:ShadowAssist.Darken" Value="True" />-->
-    </Style>
+    
+    
     <Style Selector="Label.ChildLabel">
       <Setter Property="Template">
         <ControlTemplate>
@@ -89,11 +76,11 @@
   </UserControl.Styles>
   
   <Grid>
-    <Grid RowDefinitions="170,Auto,Auto,Auto">
+    <Grid RowDefinitions="170,800,Auto,Auto">
       <Label Grid.Row="0" Classes="ChildLabel" Margin="-330 0 0 0">
       </Label>
 
-      <Grid Grid.Row="1" Margin="10 0 10 0" Height="410">
+      <Grid Grid.Row="1" Margin="10 0 10 0" Height="410" VerticalAlignment="Top">
         <Border HorizontalAlignment="Stretch">
           <local:WorkTabControlView HorizontalAlignment="Stretch" Margin="10 0 10 0">
             <local:WorkTabControlView.DataContext>
@@ -103,14 +90,14 @@
         </Border>
       </Grid>
 
-      <Grid Grid.Row="2" Margin="0 0 0 0">
+      <Grid Grid.Row="2" Margin="0 0 0 0" VerticalAlignment="Bottom">
           <DockPanel HorizontalAlignment="Center">
-            <Button Classes="Light" Content="断开"/>
-            <Button Classes="Light" Content="呼叫" Margin="10"/>
-            <Button Classes="Light" Content="暂停"/>
-            <Button Classes="Light" Content="跳过" Margin="10"/>
-            <Button Classes="Light" Content="取消"/>
-            <Button Classes="Light" Content="完成" Margin="10" Foreground="White" Background="#3166DD"/>
+            <Button Classes="HomeButton" Content="断开"/>
+            <Button Classes="HomeButton" Content="呼叫" Margin="10"/>
+            <Button Classes="HomeButton" Content="暂停"/>
+            <Button Classes="HomeButton" Content="跳过" Margin="10"/>
+            <Button Classes="HomeButton" Content="取消"/>
+            <Button Classes="HomeButton" Content="完成" Margin="10" Foreground="White" Background="#3166DD"/>
           </DockPanel>
       </Grid>
     </Grid>

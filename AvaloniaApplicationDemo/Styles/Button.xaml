@@ -2,7 +2,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <Design.PreviewWith>
     <Border Height="200" Width="200">
-      <Button Classes="leftbutton" HorizontalAlignment="Center"/>
+      <Button Classes="HomeButton" HorizontalAlignment="Center" Content="显示"/>
     </Border>
   </Design.PreviewWith>
   <Style Selector="Button.leftbutton">
@@ -15,6 +15,22 @@
   <Style Selector="Button.leftbutton /template/ ContentPresenter">
     <Setter Property="CornerRadius" Value="100"/>
   </Style>
+  <Style Selector="Button.HomeButton">
+    <Setter Property="Template">
+      <ControlTemplate>
+        <Border Height=" 45" Width="90" Margin="10" BoxShadow="0 0 15 0 #65676767" CornerRadius="5">
+          <Label Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Border>
+      </ControlTemplate>
+    </Setter>
+  </Style>
+  <!--<Style Selector="Button.HomeButton:pointerover /template/ ContentPresenter">
+    </Style>
+    <Style Selector="Button.HomeButton:not(.disabled):pointerover /template/ Border#PART_HoverIndicator">
+    </Style>
+    <Style
+    Selector="Button.HomeButton:pointerover:not(.no-material) /template/ Border#PART_ButtonRootBorder">
+    </Style>-->
   <!--<Style Selector="Button:pointerover.leftbutton /template/ ContentPresenter">
     <Setter Property="Background" Value="#80e0e0e0"/>
   </Style>-->
