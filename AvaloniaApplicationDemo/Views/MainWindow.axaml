@@ -70,6 +70,30 @@
       </Setter>
     </Style>
     
+  		<Style Selector="Button.btnButtonPopupStyle">
+			<Setter Property="FontFamily" Value="Microsoft YaHei"/>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type Button}">
+						<StackPanel>
+							<Border Margin="10" Width="40" Height="140" Background="#E6E6E6">
+								<TextBlock Text="{TemplateBinding Content}" TextWrapping="Wrap" Width="20" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+							</Border>
+						</StackPanel>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style Selector="Button.btnButtonPopupStyle:pressed">
+			<Setter Property="Foreground" Value="Green"/>
+			<Setter Property="Template">
+				<ControlTemplate TargetType="{x:Type Button}" >
+					<Border Margin="10" Width="40" Height="140" Background="#E6E6E6">
+						<TextBlock Text="{TemplateBinding Content}" TextWrapping="Wrap" Width="20" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+					</Border>
+				</ControlTemplate>
+			</Setter>
+		</Style>
   </Window.Styles>
   
     <Design.DataContext>
@@ -79,9 +103,76 @@
   <Panel>
     <Viewbox Stretch="Fill">
       <Canvas Width="1920" Height="1080">
+            <ScrollViewer Canvas.Right="-10" Canvas.Top="200">
+							<ItemsControl>
+								<ItemsControl.ItemsPanel> 
+									<ItemsPanelTemplate>
+										<WrapPanel Orientation="Vertical" Margin="0 0 0 0">
+											<Button Classes="btnButtonPopupStyle" Content="工作台信息" Command="{Binding OnClickCommand}" CommandParameter="WorkInfo">
+												<Button.Template>
+													<ControlTemplate>
+														<StackPanel>
+															<Border Margin="10" Width="40" Height="140" Background="#E6E6E6">
+																<TextBlock Text="{TemplateBinding Content}" TextWrapping="Wrap" Width="20" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+															</Border>
+														</StackPanel>
+													</ControlTemplate>
+												</Button.Template>
+											</Button>
+											<Button Classes="btnButtonPopupStyle" Content="可接种疫苗" Command="{Binding OnClickCommand}" CommandParameter="CanInocBacts">
+                        			<Button.Template>
+													<ControlTemplate>
+														<StackPanel>
+															<Border Margin="10" Width="40" Height="140" Background="#E6E6E6">
+																<TextBlock Text="{TemplateBinding Content}" TextWrapping="Wrap" Width="20" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+															</Border>
+														</StackPanel>
+													</ControlTemplate>
+												</Button.Template>
+											</Button>
+											<Button Classes="btnButtonPopupStyle" Content="历史接种记录" Command="{Binding OnClickCommand}" CommandParameter="InocRecords">
+												<Button.Template>
+													<ControlTemplate>
+														<StackPanel>
+															<Border Margin="10" Width="40" Height="140" Background="#E6E6E6">
+																<TextBlock Text="{TemplateBinding Content}" TextWrapping="Wrap" Width="20" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+															</Border>
+														</StackPanel>
+													</ControlTemplate>
+												</Button.Template>
+											</Button>
+											<Button Classes="btnButtonPopupStyle" Content="疫苗库存" Command="{Binding OnClickCommand}" CommandParameter="InventoryInfo">
+                        			<Button.Template>
+													<ControlTemplate>
+														<StackPanel>
+															<Border Margin="10" Width="40" Height="140" Background="#E6E6E6">
+																<TextBlock Text="{TemplateBinding Content}" TextWrapping="Wrap" Width="20" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+															</Border>
+														</StackPanel>
+													</ControlTemplate>
+												</Button.Template>
+											</Button>
+										</WrapPanel>
+									</ItemsPanelTemplate>
+								</ItemsControl.ItemsPanel>
+								<ItemsControl.ItemTemplate>
+									<DataTemplate>
+										<ContentControl >
+											<Border>
+												<StackPanel Margin="1,0,0,0">
+													<Button/>
+												</StackPanel>
+											</Border>
+										</ContentControl>
+									</DataTemplate>
+								</ItemsControl.ItemTemplate>
+							</ItemsControl>
+						</ScrollViewer>
+            <SplitView Canvas.Right="45" Canvas.Bottom="0" BorderBrush="Black" PaneBackground="Transparent" PanePlacement="Right" IsVisible="{Binding SplitViewIsVisible}" Background="Transparent" HorizontalAlignment="Right" VerticalAlignment="Center" Width="400" Height="600" IsPaneOpen="{Binding SplitViewIsOpen}" Pane="{Binding SplitViewPanel}">
+						</SplitView>
         <Grid Width="1920" Height="1080" RowDefinitions="60,*,30" ColumnDefinitions="100,*" >
           
-          <Grid Grid.Row="0" Grid.Column="0" Background="#3267de"/>
+          <Grid Grid.Column="0"  Grid.RowSpan="3" Background="#3267de"/>
             <Grid Grid.Row="0" Grid.Column="1">
               <Label Classes="TopLabel" Height="60">
           <Grid ColumnDefinitions="Auto,Auto,Auto,Auto">

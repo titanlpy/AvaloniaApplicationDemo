@@ -1,0 +1,14 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="600"
+             x:Class="AvaloniaApplicationDemo.Views.WorkInfoControlPage" Background="#30e6e6e6">
+	<Grid>
+		<TabControl HorizontalAlignment="Center">
+			<TabItem Header="工作台信息1" FontSize="12"></TabItem>
+			<TabItem Header="工作台信息2" FontSize="12"></TabItem>
+			<TabItem Header="工作台信息3" FontSize="12"></TabItem>
+		</TabControl>
+	</Grid>
+</UserControl>

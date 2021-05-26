@@ -29,6 +29,9 @@
     <Compile Update="Views\ComManagePage.axaml.cs">
       <DependentUpon>ComManagePage.axaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\WorkInfoControlPage.axaml.cs">
+      <DependentUpon>WorkInfoControlPage.axaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\LeftMenuView.axaml.cs">
       <DependentUpon>LeftMenuView.axaml</DependentUpon>
     </Compile>

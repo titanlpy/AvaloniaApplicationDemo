@@ -14,8 +14,8 @@
 	
 	<Grid RowDefinitions="100,*" Margin="50 50 0 0">
 		<StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Left">
-			<TextBox Text="COM4" Margin="10" Width="800"></TextBox>
-			<TextBox Text="192.168.1.206" Margin="10" Width="800"></TextBox>
+			<TextBox Text="COM1" Margin="10" Width="800"></TextBox>
+			<TextBox Text="192.168.1.1" Margin="10" Width="800"></TextBox>
 		</StackPanel>
 		<StackPanel Grid.Row="1">		
 			<Button Content="打开"></Button>

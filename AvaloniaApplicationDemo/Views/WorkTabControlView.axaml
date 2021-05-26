@@ -58,8 +58,9 @@
     <TabControl>
       <TabControl.Items>
         <TabItem Header="排队" HorizontalAlignment="Left">
-          <Border HorizontalAlignment="Left" Width="1770">
-            <DataGrid Name="datagrid" Items="{Binding Users}" Background="Transparent" CanUserReorderColumns="True" BorderBrush="WhiteSmoke" BorderThickness="2" IsReadOnly="True">
+          <Border HorizontalAlignment="Left" Width="1750">
+            <DataGrid Name="datagrid" Items="{Binding Users}" Background="Transparent" CanUserReorderColumns="True" BorderBrush="WhiteSmoke" BorderThickness="2" IsReadOnly="True" ClipboardCopyMode="None" >
+              <!--AlternatingRowBackground="" RowBackground=""-->
               <DataGrid.Columns>
                 <DataGridTextColumn Header="门诊号" Width="160" Binding="{Binding OpdNo}"/>
                 <DataGridTextColumn Header="姓名" Width="160" Binding="{Binding Name}"/>
