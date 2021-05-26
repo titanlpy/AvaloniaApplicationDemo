@@ -1,0 +1,26 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="1800" d:DesignHeight="980"
+             x:Class="AvaloniaApplicationDemo.Views.ComManagePage" Width="1820" Height="990">
+	<UserControl.Styles>
+		<Style Selector="Button">
+			<Setter Property="FontSize" Value="16"/>
+			<Setter Property="Width" Value="50"/>
+			<Setter Property="Margin" Value="5"/>
+		</Style>
+	</UserControl.Styles>
+	
+	<Grid RowDefinitions="100,*" Margin="50 50 0 0">
+		<StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Left">
+			<TextBox Text="COM4" Margin="10" Width="800"></TextBox>
+			<TextBox Text="192.168.1.206" Margin="10" Width="800"></TextBox>
+		</StackPanel>
+		<StackPanel Grid.Row="1">		
+			<Button Content="打开"></Button>
+			<Button Content="呼叫"></Button>
+			<Button Content="关闭"></Button>
+		</StackPanel>
+	</Grid>
+</UserControl>

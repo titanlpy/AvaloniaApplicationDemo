@@ -2,15 +2,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <Design.PreviewWith>
     <Border Height="200" Width="200">
-      <Button Classes="HomeButton" HorizontalAlignment="Center" Content="显示"/>
+      <Button Classes="HomeButton" HorizontalAlignment="Center" Content="显示" Background="Transparent"/>
     </Border>
   </Design.PreviewWith>
   <Style Selector="Button.leftbutton">
     <Setter Property="Margin" Value="0 0 0 0"/>
     <Setter Property="Width" Value="70"/>
     <Setter Property="Height" Value="70"/>
-    <Setter Property="IsCancel" Value="False"/>
-    <Setter Property="Background" Value="Yellow"/>
   </Style>
   <Style Selector="Button.leftbutton /template/ ContentPresenter">
     <Setter Property="CornerRadius" Value="100"/>
@@ -18,22 +16,30 @@
   <Style Selector="Button.HomeButton">
     <Setter Property="Template">
       <ControlTemplate>
-        <Border Height=" 45" Width="90" Margin="10" BoxShadow="0 0 15 0 #65676767" CornerRadius="5">
+        <Border Height=" 45" Width="90" Margin="10" BoxShadow="0 0 15 0 #65676767" CornerRadius="5" Background="{TemplateBinding Background}">
           <Label Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Border>
       </ControlTemplate>
     </Setter>
   </Style>
-  <!--<Style Selector="Button.HomeButton:pointerover /template/ ContentPresenter">
+
+
+  <Style Selector="Button.HomeButton:pointerover /template/ ContentPresenter">
+    <Setter Property="BorderThickness" Value="20"/>
     </Style>
+  
     <Style Selector="Button.HomeButton:not(.disabled):pointerover /template/ Border#PART_HoverIndicator">
+      <Setter Property="Background" Value="#80e0e0e0"/>
     </Style>
+  
     <Style
     Selector="Button.HomeButton:pointerover:not(.no-material) /template/ Border#PART_ButtonRootBorder">
-    </Style>-->
-  <!--<Style Selector="Button:pointerover.leftbutton /template/ ContentPresenter">
+      <Setter Property="Background" Value="#80e0e0e0"/>
+    </Style>
+  
+  <Style Selector="Button.leftbutton:pointerover /template/ ContentPresenter">
     <Setter Property="Background" Value="#80e0e0e0"/>
-  </Style>-->
+  </Style>
   <Style Selector="Button.cellbutton_first /template/ ContentPresenter">
     <Setter Property="CornerRadius" Value="100"/>
     <Setter Property="BorderBrush" Value="#F8A610"/>

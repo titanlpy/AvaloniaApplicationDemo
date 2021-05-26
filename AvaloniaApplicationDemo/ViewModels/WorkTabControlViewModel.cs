@@ -24,7 +24,9 @@ namespace AvaloniaApplicationDemo.ViewModels
                     Name="无忧",
                     Reserve="体检",
                     Client="问诊1",
-                    State=1
+                    State=1,
+                    IsNow = true,
+                    IsWait = false
                 },
                     new UserModel()
                 {
@@ -32,7 +34,9 @@ namespace AvaloniaApplicationDemo.ViewModels
                     Name="图片",
                     Reserve="体检",
                     Client="问诊1",
-                    State=1
+                    State=0,
+                      IsNow = false,
+                    IsWait = true
                 },
                         new UserModel()
                 {
@@ -40,7 +44,9 @@ namespace AvaloniaApplicationDemo.ViewModels
                     Name="研发",
                     Reserve="体检",
                     Client="问诊1",
-                    State=1
+                    State=0,
+                       IsNow = false,
+                    IsWait = true
                 },
                 new UserModel()
                 {
@@ -48,7 +54,9 @@ namespace AvaloniaApplicationDemo.ViewModels
                     Name="图片",
                     Reserve="体检",
                     Client="问诊1",
-                    State=1
+                    State=0,
+                       IsNow = false,
+                    IsWait = true
                 }
             };
             return retUsers;

@@ -73,8 +73,8 @@
     <Setter Property="Foreground" Value="White" />
     <Setter Property="HorizontalContentAlignment" Value="Center" />
     <Setter Property="VerticalContentAlignment" Value="Center" />
-    <Setter Property="(ScrollViewer.HorizontalScrollBarVisibility)" Value="Auto"/>
-    <Setter Property="(ScrollViewer.VerticalScrollBarVisibility)" Value="Auto"/>
+    <Setter Property="(ScrollViewer.HorizontalScrollBarVisibility)" Value="Hidden"/>
+    <Setter Property="(ScrollViewer.VerticalScrollBarVisibility)" Value="Hidden"/>
   </Style>
 
   <Style Selector="TabControl.sidebar > TabItem:selected">

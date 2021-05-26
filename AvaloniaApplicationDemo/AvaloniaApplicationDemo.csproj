@@ -16,6 +16,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Styles\Button.xaml" />
+    <None Remove="Styles\SideBar - 复制.xaml" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="0.10.4" />
@@ -25,6 +26,9 @@
     <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.4" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\ComManagePage.axaml.cs">
+      <DependentUpon>ComManagePage.axaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\LeftMenuView.axaml.cs">
       <DependentUpon>LeftMenuView.axaml</DependentUpon>
     </Compile>
@@ -32,5 +36,10 @@
   <ItemGroup>
     <AvaloniaResource Include="Styles\SideBar.xaml" />
     <AvaloniaResource Include="Styles\Button.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AvaloniaResource Update="Styles\SideBar - 复制.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </AvaloniaResource>
   </ItemGroup>
 </Project>

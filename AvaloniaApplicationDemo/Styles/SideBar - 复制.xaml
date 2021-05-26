@@ -2,12 +2,14 @@
          xmlns:local="clr-namespace:AvaloniaApplicationDemo.Views"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <Design.PreviewWith>
-    <Border Height="720">
-      <TabControl Classes="sidebar">
-        <TabItem Header="22">
-          
-        </TabItem>
-      </TabControl>
+    <Border Height="500"  Width="600">
+      <SplitView DisplayMode="Overlay" IsPaneOpen="True" Width="200" Height="200">
+        <SplitView.Pane>
+          <Grid Height="200" Width="200">
+            
+          </Grid>
+        </SplitView.Pane>
+      </SplitView>
     </Border>
   </Design.PreviewWith>
   
@@ -18,7 +20,9 @@
     <Setter Property="Template">
       <ControlTemplate>
         <Border>
-         <Label Content="sss"/>
+          <TabItem Header="22">
+            
+          </TabItem>
         </Border>
       </ControlTemplate>
     </Setter>

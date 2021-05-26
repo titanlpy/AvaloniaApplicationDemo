@@ -15,6 +15,9 @@ namespace DataGridExample.Models
         public string Client { get; set; }
 
         public int State { get; set; }
+        public bool IsNow { get; set; }
+        public bool IsWait { get; set; }
+
 
         public DateTime CreateTime { get; set; }
     }

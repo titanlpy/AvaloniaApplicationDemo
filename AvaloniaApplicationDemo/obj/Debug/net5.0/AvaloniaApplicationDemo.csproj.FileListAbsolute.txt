@@ -265,7 +265,6 @@ F:\GitHubRepository\AvaloniaApplicationDemo\AvaloniaApplicationDemo\obj\Debug\ne
 F:\GitHubRepository\AvaloniaApplicationDemo\AvaloniaApplicationDemo\obj\Debug\net5.0\AvaloniaApplicationDemo.dll
 F:\GitHubRepository\AvaloniaApplicationDemo\AvaloniaApplicationDemo\obj\Debug\net5.0\AvaloniaApplicationDemo.pdb
 F:\GitHubRepository\AvaloniaApplicationDemo\AvaloniaApplicationDemo\obj\Debug\net5.0\AvaloniaApplicationDemo.genruntimeconfig.cache
-F:\GitHubRepository\AvaloniaApplicationDemo\AvaloniaApplicationDemo\obj\Debug\net5.0\AvaloniaApplicationDemo.csproj.AssemblyReference.cache
 D:\Code\AvaloniaApplicationDemo\AvaloniaApplicationDemo\bin\Debug\net5.0\AvaloniaApplicationDemo.exe
 D:\Code\AvaloniaApplicationDemo\AvaloniaApplicationDemo\bin\Debug\net5.0\AvaloniaApplicationDemo.deps.json
 D:\Code\AvaloniaApplicationDemo\AvaloniaApplicationDemo\bin\Debug\net5.0\AvaloniaApplicationDemo.runtimeconfig.json
@@ -400,3 +399,4 @@ D:\Code\AvaloniaApplicationDemo\AvaloniaApplicationDemo\obj\Debug\net5.0\Avaloni
 D:\Code\AvaloniaApplicationDemo\AvaloniaApplicationDemo\obj\Debug\net5.0\ref\AvaloniaApplicationDemo.dll
 D:\Code\AvaloniaApplicationDemo\AvaloniaApplicationDemo\obj\Debug\net5.0\AvaloniaApplicationDemo.pdb
 D:\Code\AvaloniaApplicationDemo\AvaloniaApplicationDemo\obj\Debug\net5.0\AvaloniaApplicationDemo.genruntimeconfig.cache
+F:\GitHubRepository\AvaloniaApplicationDemo\AvaloniaApplicationDemo\obj\Debug\net5.0\AvaloniaApplicationDemo.csproj.AssemblyReference.cache

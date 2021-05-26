@@ -3,7 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
             xmlns:vm="using:AvaloniaApplicationDemo.ViewModels"
-             mc:Ignorable="d" d:DesignWidth="1920" d:DesignHeight="1080"
+             mc:Ignorable="d" d:DesignWidth="1820" d:DesignHeight="700"
              x:Class="AvaloniaApplicationDemo.Views.WorkTabControlView"
              FontFamily="Microsoft YaHei">
   <Design.DataContext>
@@ -45,7 +45,7 @@
       <Setter Property="Background" Value="Transparent" />
     </Style>
     <Style Selector="DataGridCell.gdp">
-      <Setter Property="Margin" Value="-48 0 0 0" />
+      <Setter Property="Margin" Value="-45 0 0 0" />
     </Style>
     <Style Selector="Button">
       <Setter Property="Background" Value="White" />
@@ -58,25 +58,37 @@
     <TabControl>
       <TabControl.Items>
         <TabItem Header="排队" HorizontalAlignment="Left">
-          <Border HorizontalAlignment="Left" Width="1800">
-            <DataGrid Name="datagrid" Items="{Binding Users}" Background="Transparent" CanUserReorderColumns="True">
+          <Border HorizontalAlignment="Left" Width="1770">
+            <DataGrid Name="datagrid" Items="{Binding Users}" Background="Transparent" CanUserReorderColumns="True" BorderBrush="WhiteSmoke" BorderThickness="2" IsReadOnly="True">
               <DataGrid.Columns>
-                <DataGridTextColumn Header="门诊号" Width="*" Binding="{Binding OpdNo}"/>
-                <DataGridTextColumn Header="姓名" Width="*" Binding="{Binding Name}"/>
-                <DataGridTextColumn Header="预约" Width="*" Binding="{Binding Reserve}"/>
-                <DataGridTextColumn Header="业务" Width="*" Binding="{Binding Business}"/>
-                <DataGridTextColumn Header="客户端" Width="*" Binding="{Binding Client}"/>
-                <DataGridTextColumn Header="状态" Width="*" Binding="{Binding State}"/>
+                <DataGridTextColumn Header="门诊号" Width="160" Binding="{Binding OpdNo}"/>
+                <DataGridTextColumn Header="姓名" Width="160" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="预约" Width="160" Binding="{Binding Reserve}"/>
+                <DataGridTextColumn Header="业务" Width="160" Binding="{Binding Business}"/>
+                <DataGridTextColumn Header="客户端" Width="160" Binding="{Binding Client}"/>
+                <DataGridTemplateColumn Width="220">
+                  <DataGridTemplateColumn.Header>
+                    <TextBlock Text="状态"></TextBlock>
+                  </DataGridTemplateColumn.Header>
+                  <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                      <StackPanel Orientation="Horizontal">
+                        <TextBlock IsVisible="{Binding IsNow}" Foreground="Green" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Text="正在"></TextBlock>
+                        <TextBlock IsVisible="{Binding IsWait}" Foreground="Black" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Text="等待"></TextBlock>
+                      </StackPanel>
+                    </DataTemplate>
+                  </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
                 <DataGridTemplateColumn Header="操作" CellStyleClasses="gdp">
                   <DataGridTemplateColumn.CellTemplate>
                     <DataTemplate>
                       <StackPanel Orientation="Horizontal">
-                        <Button Content="优先" Classes="cellbutton_first">
+                        <Button Content="优先" Classes="cellbutton_first" HorizontalContentAlignment="Center">
                           <Button.Styles>
                             <StyleInclude Source="/Styles/Button.xaml" />
                           </Button.Styles>
                         </Button>
-                        <Button Content="叫号" Classes="cellbutton_call" Margin="10 0 0 0">
+                        <Button Content="叫号" Classes="cellbutton_call" Margin="10 0 0 0" HorizontalContentAlignment="Center">
                           <Button.Styles>
                             <StyleInclude Source="/Styles/Button.xaml" />
                           </Button.Styles>

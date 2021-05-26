@@ -8,7 +8,7 @@
         x:Class="AvaloniaApplicationDemo.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
         Title="AvaloniaApplicationDemo"
-        FontFamily="Microsoft YaHei">
+        FontFamily="Microsoft YaHei" MinWidth="1366" MinHeight="768" WindowState="Maximized">
   <Window.Styles>
     <StyleInclude Source="/Styles/SideBar.xaml" />
     <StyleInclude Source="/Styles/Button.xaml" />
@@ -61,7 +61,10 @@
       <Setter Property="Template">
         <ControlTemplate>
           <Border Background="#F5F5F5" BoxShadow="1 2 10 1 #90676767" Margin="0 5 0 0">
-            
+             <DockPanel Margin="0 5 0 0">
+          <TextBlock Text="登陆时间：2021-5-20" HorizontalAlignment="Left" FontSize="15" Margin="20 0 0 0"/>
+          <TextBlock Text="版本：1.0.0" HorizontalAlignment="Right" FontSize="15" Margin="0 0 100 0"/>
+        </DockPanel>
           </Border>
         </ControlTemplate>
       </Setter>
@@ -121,7 +124,8 @@
               <TextBlock Text="控制器" Grid.Row="1" HorizontalAlignment="Center"/>
             </Grid>
           </TabItem.Header>
-          <Border HorizontalAlignment="Stretch">
+       <Border HorizontalAlignment="Stretch" VerticalAlignment="Top">
+            <local:ComManagePage HorizontalAlignment="Stretch" DataContext="{Binding ComManagePageViewModel}" />
           </Border>
         </TabItem>
 
